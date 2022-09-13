@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: cluster-settings
+    namespace: flux-system
+data:
+    TIMEZONE: ENC[AES256_GCM,data:3k5ATLGbpET3w2DzhcU=,iv:y652iFwB5AQkE8eZ6ndlWi1m+AThSI8796GuZCtlgHM=,tag:GVdalIJ0xXL32XQii9S1tg==,type:str]
+    METALLB_LB_RANGE: ENC[AES256_GCM,data:RmfQAK2V1eP75qZs47ZTp7BJwePYLkAKiR6u,iv:rRF9EzU0sJoofX73k31UPHiSvK45vLvyeh0mrJc4CU8=,tag:GL7ozZSAInMz1msKkcjYJw==,type:str]
+    METALLB_K8S_GATEWAY_ADDR: ENC[AES256_GCM,data:yzuVtL0rBLrMdd2bKg==,iv:cewg1KVMmxQuHcUjz5t0TQH9TeL5CeJnJlpGx8RZ8Ms=,tag:38BC7zGRvDC+KIGMXHRHmA==,type:str]
+    METALLB_TRAEFIK_ADDR: null
+    DEFAULT_TIMEZONE: ENC[AES256_GCM,data:cXqtwz2UDcAoNyUQah8=,iv:J5Z+3c7fI0GTAkgSBH9cwaWxilU8FmKZmDBIrAIHOK4=,tag:bnmkjHoFq586q+04xg3Wjw==,type:str]
+    LDAP_BASE_DN: ENC[AES256_GCM,data:+dt1UQ20DjecJeRpYsLzYmTdeCbc5DE=,iv:sj5L6YdPb68ZQg4J8fQCvhJKwW3mWTtA882Tgc+w7LQ=,tag:Cydtp+nNc/TEBkWivzL+qA==,type:str]
+    SVC_NAS_ADDR: ENC[AES256_GCM,data:6ewDjmeskx2vKjM=,iv:baYY6txxBFBwwrQDqECu/RazijmSECJuTb/dfWxFl5Y=,tag:/zpILtxPC0+sJTEHi6TtQQ==,type:str]
+    SVC_PLEX_ADDR: ENC[AES256_GCM,data:ZEox73kpu1uQQcg=,iv:6fe4frTcfpxMdVJpJgHyKvlOVL3PhjczSSTG+YzFjtE=,tag:Vyh54lssfykscOz//ZPZeQ==,type:str]
+    SVC_UNIFI_ADDR: ENC[AES256_GCM,data:g+cy8iI95fyIiFg=,iv:kOHsSp0NDxxRCt1S+k3zK9cJD5pg0LK4p4jbgHkARY0=,tag:s7BflUO09rekkcCqGqRW9g==,type:str]
+    GATEWAY_ADDR: ""
+    LB_NGINX_ADDR: ENC[AES256_GCM,data:c6RkrLclNepd49IP2A==,iv:9dCCn1NchVRRoNDJVU/F9oM00Uif8/b3P9qBziMWz/I=,tag:CHAFzg9AfMjVeq4mP1WJTg==,type:str]
+    LB_TRAEFIK_ADDR: ENC[AES256_GCM,data:PJV9pj7xqViwlAjZfg==,iv:3zGFupRVj6nH5sq3kzjK2sk/i6ciTeW6q9PgNiPfYUI=,tag:YD4pfB2/41H1WFT+WE/G/g==,type:str]
+    LB_LDAP_ADDR: ENC[AES256_GCM,data:PL+tUuMZdZZdViA9Ow==,iv:/9H+Y4v3nSebYqx1yS+TyLVa0CPD2vg6Y8M8wSXftvc=,tag:SVmwNWBOviMRgLC7mUOV4g==,type:str]
+    LB_REDIS_ADDR: ENC[AES256_GCM,data:z5uTr73vojJImx9cdQ==,iv:StQ9qBmdmK/qHo/rtWNNZ4lNBHp7qcKRtbZtb/IpCWA=,tag:TcLyHObbzjXPPJdVRHX6Yg==,type:str]
+    LB_RABBITMQ_ADDR: ENC[AES256_GCM,data:S1ke9IkKZZddbPb7Nw==,iv:JMq0MY2qrIJ0SwFNuYrKLS8tDG0ZMEBdI8r6ioXRojI=,tag:g4g6+Ilx+reKURaeUJWqXA==,type:str]
+    LB_POSTGRES_ADDR: ENC[AES256_GCM,data:TXMW/KrcesqSFSU5JA==,iv:D2Z9+E0r6B0ngPs8AzovDlqH38pscsdO38PBmxSMFxc=,tag:yOJY4Pxf2++wcPfSHlhQPQ==,type:str]
+    LB_MSSQL_ADDR: ENC[AES256_GCM,data:4S3l9HN+h4muWiBHKw==,iv:IiumQgg8BDTWzadIdNyzv5DHI3rwLj6XSXp7CgsoxFw=,tag:c0D5RcwBXhFxLIUJMbhpKQ==,type:str]
+    LB_SMTP4DEV_ADDR: ENC[AES256_GCM,data:Bvd8H1whBtXQjxjZOA==,iv:5qaq++3xyQlN/6XlvQ39Xbq1EIf34KXk+6rMY6Np8mg=,tag:L7ww80cfJnBvTfMVRcwLnA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1cg8jk89nugmrn3rylak4shyaq2ssgvp2g6975884zp3u2t8klenqx9cnau
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBFUTRnKzhrYjc3eElsVURm
+            QWxkREQ3LzVPYTBFVFMyWm1YdDB0NzgwTkhzCnRscDc0RXlTNExkSzVLVFpLRGYx
+            ODhsdWFpU2E3b1lRY2lJL2phUzBhSzAKLS0tIFN1cWRDR3U5eUpaaVNCSUxPVmpt
+            T3RpM1k4SFpJUmFCeDBHY2g3TVJTZ0kKUDfovGXV1Tw/AZ7tRKlomm5JJabD8j8h
+            XEm+Di3Fis2l6xykoZxSfQ9YA8jAndsnyFHx6mj5Acn79MnneMZlOw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-09-13T06:55:18Z"
+    mac: ENC[AES256_GCM,data:STJmjeFJ5jG6FmU5EjjXOqcnk2GZnVMzAvWTE1grqKuhJRHi0Lm85tAUC08sGW8tRQjdjLerYQBY1Kn0Sau8JwZjeSiiGs+g9Np0UdFF7GVBgmATJvVpdRrB2k9adSroF5k7Td4KoxcZPFIdZTu90UYQ6jHUtQj6qn5Fzy2Vnuk=,iv:kGgzw1larhnwe+HYzGIsPdHIVDK7YhCtpLoEi5iM5KE=,tag:F3JJT4+5X7HO/ZIzE/BpyQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

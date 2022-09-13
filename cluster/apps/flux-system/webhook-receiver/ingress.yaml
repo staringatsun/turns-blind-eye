@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webhook-receiver
+  namespace: flux-system
+  annotations:
+    kubernetes.io/tls-acme: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+    - secretName: webhook-receiver-tls
+      hosts:
+        - flux-webhook.${SECRET_DOMAIN}
+  rules:
+    - host: flux-webhook.${SECRET_DOMAIN}
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: webhook-receiver
+                port:
+                  number: 80
