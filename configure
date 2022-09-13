@@ -64,8 +64,8 @@ main() {
             > "${PROJECT_DIR}/cluster/apps/networking/ldap-user-manager/secret.sops.yaml"
         envsubst < "${PROJECT_DIR}/tmpl/cluster/k10.secret.sops.yaml" \
             > "${PROJECT_DIR}/cluster/apps/kasten-io/k10/k10-dr-secret.sops.yaml"
-        envsubst < "${PROJECT_DIR}/tmpl/cluster/hook.secret.sops.yaml" \
-            > "${PROJECT_DIR}/cluster/apps/flux-system/webhook-receiver/secret.sops.yaml"
+        # envsubst < "${PROJECT_DIR}/tmpl/cluster/hook.secret.sops.yaml" \
+        #     > "${PROJECT_DIR}/cluster/apps/flux-system/webhook-receiver/secret.sops.yaml"
         # encrypt cluster secrets
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/config/cluster-secrets.sops.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/config/cluster-settings.sops.yaml"
@@ -75,7 +75,7 @@ main() {
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/dev/harbor/secret.sops.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/networking/ldap-user-manager/secret.sops.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/kasten-io/k10/k10-dr-secret.sops.yaml"
-        sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/flux-system/webhook-receiver/secret.sops.yaml"
+        # sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/flux-system/webhook-receiver/secret.sops.yaml"
         # generate terraform secrets
         envsubst < "${PROJECT_DIR}/tmpl/terraform/secret.sops.yaml" \
             > "${PROJECT_DIR}/provision/terraform/cloudflare/secret.sops.yaml"
