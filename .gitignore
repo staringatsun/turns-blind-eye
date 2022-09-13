@@ -12,7 +12,8 @@ kubeconfig
 # Ansible
 xanmanning.k3s*
 ansible.cfg
-
+# Deploykey
+github-deploy-key*
 # Local .terraform directories
 **/.terraform/*
 
@@ -54,3 +55,5 @@ terraform.rc
 *.bk
 # Templating manifold
 tmpl*
+# GIT ignorged
+gi.*
