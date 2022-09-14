@@ -5,3 +5,7 @@ resources:
   - cert-manager.yaml
   - metallb-system.yaml
   - networking.yaml
+  - longhorn-system.yaml
+  - dev.yaml
+  - ingress-nginx.yaml
+  - home.yaml
