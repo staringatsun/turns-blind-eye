@@ -6,7 +6,6 @@ resources:
   - dev
   - flux-system
   - home
-  - ingress-nginx
   - kasten-io
   - kube-system
   - media
