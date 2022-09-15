@@ -10,3 +10,4 @@ resources:
   - readarr
   - sabnzbd
   - sonarr
+  - qbittorrent
